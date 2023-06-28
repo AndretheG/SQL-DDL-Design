@@ -27,10 +27,10 @@ CREATE TABLE tickets
   departure TIMESTAMP NOT NULL,
   arrival TIMESTAMP NOT NULL,
   airline TEXT NOT NULL,
-  from_city TEXT NOT NULL REFERENCES destinations(from_city) ON DELETE CASCADE,
-  from_country TEXT NOT NULL REFERENCES destinations ON DELETE CASCADE,
-  to_city TEXT NOT NULL REFERENCES destinations ON DELETE CASCADE,
-  to_country TEXT NOT NULL REFERENCES destinations ON DELETE CASCADE,
+  from_city TEXT NOT NULL REFERENCES destinations(city) ON DELETE CASCADE,
+  from_country TEXT NOT NULL REFERENCES destinations(country) ON DELETE CASCADE,
+  to_city TEXT NOT NULL REFERENCES destinations(city) ON DELETE CASCADE,
+  to_country TEXT NOT NULL REFERENCES destinations(city) ON DELETE CASCADE,
 );
 
 INSERT INTO passengers 

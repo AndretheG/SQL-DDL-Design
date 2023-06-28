@@ -16,7 +16,7 @@ CREATE TABLE galaxies (
 CREATE TABLE planets
 (
   id SERIAL PRIMARY KEY,
-  name TEXT RE ,
+  name TEXT NOT NULL,
   orbital_period_in_years FLOAT NOT NULL,
   orbits_around TEXT NOT NULL,
   galaxy TEXT REFERENCES galaxies(name) ON DELETE CASCADE,
